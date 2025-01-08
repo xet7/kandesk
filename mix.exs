@@ -52,10 +52,12 @@ defmodule Kandesk.MixProject do
       {:pow, "~> 1.0.25"},
       {:bamboo, "~> 1.6.0"},
       {:bamboo_smtp, "~> 3.0.0"},
-      {:ex_cldr, "~> 2.22"},
+      {:ex_cldr, "~> 2.37"},
       {:ex_cldr_numbers, "~> 2.18"},
       {:ex_cldr_dates_times, "~> 2.7"},
-      {:tzdata, "~> 1.0.1"}
+      {:tzdata, "~> 1.0.1"},
+      {:plug, "~> 1.13", override: true},
+      {:ex_cldr_plugs, github: "elixir-cldr/cldr_plug"}
     ]
   end
 

@@ -1,11 +1,4 @@
-# This file is responsible for configuring your application
-# and its dependencies with the aid of the Mix.Config module.
-#
-# This configuration file is loaded before any dependency and
-# is restricted to this project.
-
-# General application configuration
-use Mix.Config
+import Config
 
 config :kandesk,
   ecto_repos: [Kandesk.Repo]
@@ -16,7 +9,11 @@ config :kandesk, KandeskWeb.Endpoint,
   secret_key_base: "O8I0j9p1IXJUi65h5S73INz0qDzLxQ3pfIcCR9Y3BjMmWGXhlcJFTFfDRMbHpHr7",
   render_errors: [view: KandeskWeb.ErrorView, accepts: ~w(html json)],
   pubsub_server: Kandesk.PubSub,
-  live_view: [signing_salt: "5BFoIPvCG/CUh9GwpXNBIC2qh/JUB/Z5"]
+  live_view: [signing_salt: "5BFoIPvCG/CUh9GwpXNBIC2qh/JUB/Z5"],
+  http: [port: 4001],
+  debug_errors: true,
+  code_reloader: true,
+  check_origin: false
 
 # Configures pow
 config :kandesk, :pow,
@@ -41,4 +38,4 @@ config :elixir, :time_zone_database, Tzdata.TimeZoneDatabase
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env()}.exs"
+import_config "#{config_env()}.exs"
