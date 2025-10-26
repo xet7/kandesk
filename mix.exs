@@ -7,7 +7,7 @@ defmodule Kandesk.MixProject do
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -50,13 +50,13 @@ defmodule Kandesk.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:argon2_elixir, "~> 2.2.1"},
       {:pow, "~> 1.0.25"},
-      {:bamboo, "~> 1.6.0"},
-      {:bamboo_smtp, "~> 3.0.0"},
+      # {:bamboo, "~> 1.6.0"},
+      # {:bamboo_smtp, "~> 3.0.0"},
       {:ex_cldr, "~> 2.37"},
       {:ex_cldr_numbers, "~> 2.18"},
       {:ex_cldr_dates_times, "~> 2.7"},
       {:tzdata, "~> 1.0.1"},
-      {:plug, "~> 1.13", override: true},
+      {:plug, "~> 1.13"},
       {:ex_cldr_plugs, github: "elixir-cldr/cldr_plug"}
     ]
   end
