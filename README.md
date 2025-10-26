@@ -8,6 +8,8 @@ Kandesk is a simple trello-like app that I created for my own needs and for lear
 
 [Elixir 1.12+](https://elixir-lang.org/install.html) is required to run Kandesk.
 
+Node.js 25 or newer.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
